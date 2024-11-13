@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <p>Rock Paper Scissor</p>
+    <button onclick="calculateWinner(1)">Rock</button>
+    <button onclick="calculateWinner(2)">Paper</button>
+    <button onclick="calculateWinner(3)">Scissors</button>
+  </body>
+  <script>
+    function calculateWinner(playerMove) {
+      let moves = ["Rock", "Paper", "Scissors"];
+
+      let randomNumber = Math.floor(Math.random() * 3) + 1;
+      let computerMove = moves[randomNumber - 1];
+      let move = moves[playerMove - 1];
+      console.log(`Player Move: ${move}`);
+      console.log(`Computer Move: ${computerMove}`);
+
+      if (playerMove === randomNumber) {
+        console.log("It's a tie!");
+      } else if (
+        (playerMove === 1 && randomNumber === 3) || // Rock beats Scissors
+        (playerMove === 2 && randomNumber === 1) || // Paper beats Rock
+        (playerMove === 3 && randomNumber === 2) // Scissors beats Paper
+      ) {
+        console.log("Player wins!");
+      } else {
+        console.log("Computer wins!");
+      }
+    }
+  </script>
+</html>
