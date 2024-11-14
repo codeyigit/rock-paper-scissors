@@ -1,0 +1,113 @@
+body {
+    font-family:'Times New Roman', Times, serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 36px;
+    font-weight: 700;
+  }
+  
+  .game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 120px);
+  }
+  
+  .options {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  
+  .option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    cursor: pointer;
+  }
+  
+  .option img {
+    width: 150px;
+    height: 150px;
+    transition: transform 0.3s ease;
+    border: 5px solid darkred;
+    border-radius: 100px;
+    padding: 30px;
+    border-collapse: collapse;
+  }
+  
+  .option span {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  
+  .move-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 40px;
+  }
+  
+  .player-move,
+  .computer-move {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .player-move img,
+  .computer-move img {
+    width: 150px;
+    height: 150px;
+  }
+  .options img:hover{
+    transform: scale(1.1);
+  }
+  .player-move span,
+  .computer-move span {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  
+  .winner {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .winner.player {
+    color: #4CAF50;
+  }
+  
+  .winner.computer {
+    color: #F44336;
+  }
+  
+  .scores {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .player-score,
+  .computer-score {
+    display: flex;
+    align-items: center;
+  }
+  
+  .player-score span,
+  .computer-score span {
+    margin-right: 10px;
+  }
